@@ -7,7 +7,7 @@
 
 	co = checkout
 	st = status
-	br = branch
+	br = branch -av
 
 [apply]
 
@@ -15,6 +15,7 @@
 	whitespace = fix
 
 [core]
+    editor=vim
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
