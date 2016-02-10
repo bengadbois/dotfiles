@@ -21,6 +21,7 @@ git clone https://github.com/spolu/dwm.vim
 git clone https://github.com/ctrlpvim/ctrlp.vim
 git clone https://github.com/scrooloose/syntastic
 git clone https://github.com/tpope/vim-sleuth.git
+git clone https://github.com/mhinz/vim-startify.git
 
 
 exit 0
