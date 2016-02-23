@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#setup dotfiles
+#setup normal ~/.dotfiles
 
 files=(tmux.conf vimrc gitconfig)
 
@@ -9,6 +9,11 @@ do
   echo "setting up $file"
   ln -sf ~/dotfiles/${file} ~/.${file}
 done
+
+#setup ~/.config/
+
+rm -f ~/.config/terminator/config
+ln -sf ~/dotfiles/config/terminator/config ~/.config/terminator/config
 
 #vim
 
