@@ -30,4 +30,3 @@ export EDITOR="$VISUAL"
 
 alias v='vim'
 alias py='python'
-
