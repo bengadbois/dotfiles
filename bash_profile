@@ -30,3 +30,12 @@ export EDITOR="$VISUAL"
 
 alias v='vim'
 alias py='python'
+
+#
+# For host-specific aliases that shouldn't be
+# added in here (security, specificness, etc.)
+#
+if [[ -f ~/.bash_aliases ]]
+then
+  source ~/.bash_aliases
+fi
