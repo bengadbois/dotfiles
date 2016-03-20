@@ -6,12 +6,15 @@ alias ..='cd ..'
 alias ...='cd ...'
 alias ....='cd ....'
 alias mkdir='mkdir -pv'
-alias ls='ls --color=auto'
 alias sl='ls'
 alias accio='ls -A | grep -i $1'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias unmount='umount'
+
+#Color ls output
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 # Keep 1000 lines in .bash_history (default is 500)
 export HISTSIZE=5000
