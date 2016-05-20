@@ -8,6 +8,8 @@
 	co = checkout
 	st = status
 	br = branch -av
+	
+	rekt = reset --hard
 
 [apply]
 
