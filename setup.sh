@@ -29,6 +29,8 @@ git clone https://github.com/tpope/vim-sleuth.git
 git clone https://github.com/mhinz/vim-startify.git
 git clone https://github.com/fatih/vim-go.git
 git clone https://github.com/sheerun/vim-polyglot.git
+git clone git://github.com/tpope/vim-fugitive.git
+vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
 
 exit 0
