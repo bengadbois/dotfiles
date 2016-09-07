@@ -26,6 +26,12 @@ set autoindent
 set cindent
 "set paste "so new lines don't get wrapped weirdly
 
+"folding
+set foldmethod=indent "fold based on indent
+set foldnestmax=10    "deepest fold is 10 levels
+set nofoldenable      "dont fold by default
+set foldlevel=1
+
 "ignore
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o
 
