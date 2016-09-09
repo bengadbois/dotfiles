@@ -12,8 +12,11 @@ done
 
 #setup ~/.config/
 
-rm -f ~/.config/terminator/config
-ln -sf ~/dotfiles/config/terminator/config ~/.config/terminator/config
+if [[ -d ~/.config/terminator/ ]]
+then
+  rm -f ~/.config/terminator/config
+  ln -sf ~/dotfiles/config/terminator/config ~/.config/terminator/config
+fi
 
 #vim
 
