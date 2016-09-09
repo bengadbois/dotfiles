@@ -2,7 +2,7 @@
 
 #setup normal ~/.dotfiles
 
-files=(tmux.conf vimrc gitconfig bash_profile)
+files=(tmux.conf vimrc gitconfig bash_profile gitignore)
 
 for file in "${files[@]}"
 do
