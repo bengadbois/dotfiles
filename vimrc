@@ -10,12 +10,6 @@ highlight VertSplit cterm=none gui=none
 set hlsearch
 set encoding=utf8
 
-"status line
-set laststatus=2 "always display the status
-set statusline=%2f\  "name of file
-set statusline+=%= "switch to right side
-set statusline+=Col:\ %-2c\ Line:\ %l\/%L\ (%p%%) "column and line position
-
 "searching
 set ignorecase "case insensitive
 set smartcase  "use case if any caps used 
