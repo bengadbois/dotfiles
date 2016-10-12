@@ -32,6 +32,7 @@ git clone https://github.com/tpope/vim-sleuth.git
 git clone https://github.com/fatih/vim-go.git
 git clone https://github.com/sheerun/vim-polyglot.git
 git clone https://github.com/vim-airline/vim-airline
+git clone https://github.com/vim-airline/vim-airline-themes
 git clone git://github.com/tpope/vim-fugitive.git
 vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
