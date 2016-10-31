@@ -40,6 +40,8 @@ set tabstop=4
 
 "ctrl p
 let g:ctrlp_working_path_mode = 'a'
+"ctrl p ignore .gitignored files
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 "vimdiff
 set diffopt+=iwhite "ignore whitespace
