@@ -9,7 +9,7 @@ set background=dark
 highlight VertSplit cterm=none gui=none
 set hlsearch
 set encoding=utf8
-let g:airline_theme='tomorrow'
+let g:airline_theme='wombat'
 
 "searching
 set ignorecase "case insensitive
