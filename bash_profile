@@ -60,6 +60,9 @@ export EDITOR="$VISUAL"
 alias v='vim'
 alias py='python'
 
+#homebrew
+export HOMEBREW_NO_ANALYTICS=1
+
 #
 # For host-specific aliases that shouldn't be
 # added in here (security, specificness, etc.)
