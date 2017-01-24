@@ -17,7 +17,7 @@
 	whitespace = fix
 
 [core]
-    editor=vim
+	editor=vim
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
@@ -39,3 +39,6 @@
 
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
+
+[http "https://gopkg.in"]
+	followRedirects = true
