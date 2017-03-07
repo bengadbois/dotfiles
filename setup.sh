@@ -2,21 +2,13 @@
 
 #setup normal ~/.dotfiles
 
-files=(tmux.conf vimrc gitconfig bash_profile gitignore iterm)
+files=(tmux.conf vimrc gitconfig bash_profile gitignore)
 
 for file in "${files[@]}"
 do
   echo "setting up $file"
   ln -sf ~/dotfiles/${file} ~/.${file}
 done
-
-#setup ~/.config/
-
-if [[ -d ~/.config/terminator/ ]]
-then
-  rm -f ~/.config/terminator/config
-  ln -sf ~/dotfiles/config/terminator/config ~/.config/terminator/config
-fi
 
 #vim
 
