@@ -7,9 +7,9 @@ Plug 'tpope/vim-fugitive'
 "language/file
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 Plug 'sheerun/vim-polyglot'
-"statusbar
+"visual
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'dracula/vim', { 'as': 'dracula' }
 "formatting
 Plug 'tpope/vim-sleuth'
 "misc
@@ -24,10 +24,11 @@ call plug#end()
 syntax enable
 syntax on
 set background=dark
+color dracula
 highlight VertSplit cterm=none gui=none
 set hlsearch
 set encoding=utf8
-let g:airline_theme='wombat'
+let g:airline_theme='dracula'
 let g:airline#extensions#branch#enabled = 1 "show branch name in statusbar
 
 "searching
