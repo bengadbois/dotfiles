@@ -47,3 +47,5 @@
 [user]
 	email = git@bengadbois.email
 	name = Ben Gadbois
+[push]
+	default = simple
