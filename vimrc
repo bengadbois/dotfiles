@@ -1,6 +1,24 @@
-"pathogen
-call pathogen#infect()
-filetype plugin indent on
+"plugins
+call plug#begin('~/.vim/plugged')
+
+"git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+"language/file
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
+Plug 'sheerun/vim-polyglot'
+"statusbar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"formatting
+Plug 'tpope/vim-sleuth'
+"misc
+Plug 'spolu/dwm.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-commentary'
+
+call plug#end()
 
 "visual
 syntax enable
