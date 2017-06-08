@@ -39,7 +39,6 @@ set incsearch  "show match as search proceeds
 "indent
 set autoindent
 set cindent
-"set paste "so new lines don't get wrapped weirdly
 
 "folding
 set foldmethod=indent "fold based on indent
