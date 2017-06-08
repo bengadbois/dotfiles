@@ -24,7 +24,7 @@ call plug#end()
 syntax enable
 syntax on
 set background=dark
-color dracula
+silent! color dracula "if started before plugins installed this would throw an error
 highlight VertSplit cterm=none gui=none
 set hlsearch
 set encoding=utf8
