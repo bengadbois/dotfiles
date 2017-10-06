@@ -5,11 +5,11 @@ install () {
   for file in "${files[@]}"
   do
 	echo "Linking $file"
-	ln -sf ~/.dotfiles/${file} ~/.${file}
+	ln -sf "$HOME/.dotfiles/${file}" "$HOME/.${file}"
   done
 
   #vim
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   vim +PlugInstall +qall
 }
