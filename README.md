@@ -2,4 +2,7 @@
 
 All my configs
 
-Install with ```./setup.sh```
+Install by running
+```
+sh -c "`curl -fsSL https://raw.githubusercontent.com/bengadbois/dotfiles/master/install.sh`"
+```
