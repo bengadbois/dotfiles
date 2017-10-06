@@ -5,7 +5,7 @@ install () {
   for file in "${files[@]}"
   do
 	echo "Linking $file"
-	ln -sf ~/dotfiles/${file} ~/.${file}
+	ln -sf ~/.dotfiles/${file} ~/.${file}
   done
 
   #vim
