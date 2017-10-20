@@ -14,9 +14,11 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-sleuth'
 "misc
 Plug 'spolu/dwm.vim'
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -57,11 +59,6 @@ set noswapfile
 "tab sizes
 set tabstop=4
 
-"ctrl p
-let g:ctrlp_working_path_mode = 'a'
-"ctrl p ignore .gitignored files
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-
 "go
 let g:go_fmt_command = "goimports"
 
@@ -85,3 +82,10 @@ if !exists("my_auto_commands_loaded")
     autocmd BufReadPre * let f=expand("<afile>") | if getfsize(f) > g:LargeFile | set eventignore+=FileType | setlocal noswapfile bufhidden=unload buftype=nowrite undolevels=-1 | else | set eventignore-=FileType | endif
   augroup END
 endif
+
+"key mappings
+let g:fzf_action = {
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
+nnoremap <c-p> :FZF<cr>
