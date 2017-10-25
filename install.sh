@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 install () {
   files=(tmux.conf vimrc gitconfig bash_profile gitignore)
