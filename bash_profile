@@ -75,10 +75,10 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
 #
-# For host-specific aliases that shouldn't be
+# For host-specific extra that shouldn't be
 # added in here (security, specificness, etc.)
 #
-if [[ -f ~/.bash_aliases ]]
+if [[ -f ~/.bash_extra ]]
 then
-  source ~/.bash_aliases
+  source ~/.bash_extra
 fi
