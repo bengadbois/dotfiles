@@ -26,11 +26,17 @@ install () {
 install_mac () {
   echo "Installing packages on Mac"
   #install brew
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+  if [[ ! $(command -v brew) ]]
+  then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+  fi
 
   #fzf
-  brew install fzf
-  $(brew --prefix)/opt/fzf/install
+  if [[ ! $(command -v fzf) ]]
+  then
+    brew install fzf
+    $(brew --prefix)/opt/fzf/install
+  fi
 }
 
 if [ -d "$HOME/.dotfiles" ]
