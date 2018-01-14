@@ -8,10 +8,6 @@ install () {
 	ln -sf "$HOME/.dotfiles/${file}" "$HOME/.${file}"
   done
 
-  #some OSes/terminals won't read a new .bash_profile per new shell, just .bashrc
-  #so source .bash_profile
-  echo -e "\n[[ -f ~/.bash_profile ]] && source ~/.bash_profile" >> $HOME/.bashrc
-
   #vim
   curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
