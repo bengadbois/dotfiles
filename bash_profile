@@ -83,7 +83,7 @@ export PATH=$PATH:$GOPATH/bin
 # For host-specific extra that shouldn't be
 # added in here (security, specificness, etc.)
 #
-if [[ -f ~/.bash_extra ]]
+if [[ -f $HOME/.bash_extra ]]
 then
-  source ~/.bash_extra
+  source $HOME/.bash_extra
 fi
