@@ -50,7 +50,7 @@ set foldlevel=1
 "ignore
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o
 
-"~files
+"temp files
 set nobackup
 set nowritebackup
 set noswapfile
