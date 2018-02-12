@@ -14,7 +14,6 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-sleuth'
 "misc
 Plug 'spolu/dwm.vim'
-"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
