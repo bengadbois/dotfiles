@@ -7,7 +7,7 @@
 
 	co = checkout
 	st = status
-	br = branch -av
+	br = branch
 	prune = fetch --prune
 	
 	rekt = reset --hard
