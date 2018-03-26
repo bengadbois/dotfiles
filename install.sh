@@ -13,6 +13,13 @@ install () {
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   vim +PlugInstall +qall
 
+  #git completion
+  if [ ! -f "$HOME/.git-completion.bash" ]
+  then
+    curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o "$HOME/.git-completion.bash"
+    chmod +x "$HOME/.git-completion.bash"
+  fi
+
   if [[ $(uname) == Darwin ]]
   then
     install_mac

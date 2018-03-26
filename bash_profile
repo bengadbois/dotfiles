@@ -80,6 +80,14 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
 #
+# Bash completion
+#
+if [ -f "$HOME/.git-completion.bash" ]
+then
+  source "$HOME/.git-completion.bash"
+fi
+
+#
 # For host-specific extra that shouldn't be
 # added in here (security, specificness, etc.)
 #
