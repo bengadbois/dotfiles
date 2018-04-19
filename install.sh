@@ -46,6 +46,12 @@ install_mac () {
   then
     brew install rg
   fi
+
+  #tree
+  if [[ ! $(command -v tree) ]]
+  then
+    brew install tree
+  fi
 }
 
 if [ -d "$HOME/.dotfiles" ]
