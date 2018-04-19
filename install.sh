@@ -40,6 +40,12 @@ install_mac () {
     brew install fzf
     $(brew --prefix)/opt/fzf/install
   fi
+
+  #ripgrep
+  if [[ ! $(command -v rg) ]]
+  then
+    brew install rg
+  fi
 }
 
 if [ -d "$HOME/.dotfiles" ]
