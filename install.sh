@@ -34,24 +34,8 @@ install_mac () {
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
   fi
 
-  #fzf
-  if [[ ! $(command -v fzf) ]]
-  then
-    brew install fzf
-    $(brew --prefix)/opt/fzf/install
-  fi
-
-  #ripgrep
-  if [[ ! $(command -v rg) ]]
-  then
-    brew install rg
-  fi
-
-  #tree
-  if [[ ! $(command -v tree) ]]
-  then
-    brew install tree
-  fi
+  brew install fzf rg tree
+  $(brew --prefix)/opt/fzf/install
 }
 
 if [ -d "$HOME/.dotfiles" ]
