@@ -12,12 +12,14 @@ alias ...='cd ...'
 alias ....='cd ....'
 alias mkdir='mkdir -pv'
 alias sl='ls'
-alias accio='ls -A | grep -i $1'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias unmount='umount'
 alias path='echo -e ${PATH//:/\\n}' #print all executable paths
 alias gopath='cd "$GOPATH"'
+function accio {
+  ls -A | grep -i $1
+}
 
 #Color ls output
 export CLICOLOR=1
