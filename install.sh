@@ -23,6 +23,8 @@ install () {
   if [[ $(uname) == Darwin ]]
   then
     install_mac
+  else
+    install_linux
   fi
 }
 
@@ -34,8 +36,14 @@ install_mac () {
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
   fi
 
-  brew install fzf rg tree
+  brew install fzf rg tree direnv
   $(brew --prefix)/opt/fzf/install
+}
+
+install_linux() {
+  echo "Installing packages on Linux"
+
+  sudo apt install --yes direnv
 }
 
 if [ -d "$HOME/.dotfiles" ]

@@ -90,6 +90,11 @@ then
 fi
 
 #
+# Direnv
+#
+eval "$(direnv hook bash)"
+
+#
 # For host-specific extra that shouldn't be
 # added in here (security, specificness, etc.)
 #
