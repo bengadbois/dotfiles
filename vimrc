@@ -18,6 +18,7 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'jremmen/vim-ripgrep'
 
 call plug#end()
 
@@ -31,6 +32,7 @@ set hlsearch
 set encoding=utf8
 let g:airline_theme='dracula'
 let g:airline#extensions#branch#enabled = 1 "show branch name in statusbar
+let g:rg_highlight='true' "rg matches highlighted
 
 "searching
 set ignorecase "case insensitive
