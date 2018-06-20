@@ -25,6 +25,17 @@ function accio {
 # fzf based commands
 #
 
+# v - fzf preview and open files in vim
+v() {
+  if [ -z "$1" ];
+  then
+    fzf --preview "(ccat --color=always {} || cat {})" --bind "enter:execute(vim {})"
+  else
+    # open directly
+    vim "$1"
+  fi
+}
+
 # fd - cd to selected directory
 fd() {
   local dir
@@ -90,7 +101,6 @@ export EDITOR="$VISUAL"
 # Programs
 #
 
-alias v='vim'
 alias py='python'
 
 #

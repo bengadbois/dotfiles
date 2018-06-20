@@ -36,7 +36,7 @@ install_mac () {
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
   fi
 
-  brew install fzf rg tree direnv
+  brew install fzf rg tree direnv ccat
   $(brew --prefix)/opt/fzf/install
 }
 
