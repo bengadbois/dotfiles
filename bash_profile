@@ -8,8 +8,8 @@ fi
 #
 
 alias ..='cd ..'
-alias ...='cd ...'
-alias ....='cd ....'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias mkdir='mkdir -pv'
 alias sl='ls'
 alias grep='grep --color=auto'
