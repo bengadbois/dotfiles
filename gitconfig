@@ -45,7 +45,7 @@
 	followRedirects = true
 
 [user]
-	email = git@bengadbois.email
+	email = git@bengadbois.com
 	name = Ben Gadbois
 [push]
 	default = simple
