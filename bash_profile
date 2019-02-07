@@ -64,6 +64,8 @@ export HISTSIZE=5000
 export HISTFILESIZE=5000
 # Don't put duplicate lines or lines starting with space in the history
 export HISTCONTROL=ignoreboth
+# Ignore one and two letter commands
+export HISTIGNORE=?:?? 
 
 
 # Extract most known archives with one command
