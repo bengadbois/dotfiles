@@ -33,6 +33,7 @@ set encoding=utf8
 let g:airline_theme='dracula'
 let g:airline#extensions#branch#enabled = 1 "show branch name in statusbar
 let g:rg_highlight='true' "rg matches highlighted
+let g:gitgutter_max_signs = 9999  "allow gitgutter on files with many changes
 
 "searching
 set ignorecase "case insensitive
