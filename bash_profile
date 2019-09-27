@@ -99,16 +99,6 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 #
-# Tmux
-#
-syncon() {
-  tmux set-window-option synchronize-panes on > /dev/null
-}
-syncoff() {
-  tmux set-window-option synchronize-panes off > /dev/null
-}
-
-#
 # Programs
 #
 
