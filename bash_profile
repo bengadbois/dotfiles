@@ -65,8 +65,11 @@ export HISTFILESIZE=5000
 # Don't put duplicate lines or lines starting with space in the history
 export HISTCONTROL=ignoreboth
 # Ignore one and two letter commands
-export HISTIGNORE=?:?? 
-
+export HISTIGNORE=?:??
+# Append to history, don't overwrite it
+shopt -s histappend
+# Append to history at each shell prompt (don't wait for shell to exit)
+PROMPT_COMMAND="history -a"
 
 # Extract most known archives with one command
 extract () {
