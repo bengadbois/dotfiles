@@ -75,9 +75,6 @@ function! s:build_go_files()
 endfunction
 autocmd FileType go nmap <silent> <c-b> :<C-u>call <SID>build_go_files()<CR>
 
-"vimdiff
-set diffopt+=iwhite "ignore whitespace
-
 " Protect large files from sourcing and other overhead.
 " Files become read only
 if !exists("my_auto_commands_loaded")
