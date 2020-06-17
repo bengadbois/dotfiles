@@ -129,7 +129,7 @@ fi
 #
 # Prompt
 #
-PS1="┌─[\`if [ \$? = 0 ]; then echo \[\e[32m\]✔\[\e[0m\]; else echo \[\e[31m\]✘\[\e[0m\]; fi\`]──[\[\e[36m\]\u\[\e[0m\]\[\e[36m\]@\H\[\e[0m\]]──[\[\e[32m\]\w\[\e[0m\]]\` if [[ \$(git rev-parse --is-inside-work-tree 2>/dev/null) = true ]]; then echo ──[\e[34m\] \$(git rev-parse --abbrev-ref HEAD)\e[0m\]]; fi\`\n└──▶ "
+PS1="┌─[\`if [ \$? = 0 ]; then echo \[\e[32m\]✔\[\e[0m\]; else echo \[\e[31m\]✘\[\e[0m\]; fi\`]──[\[\e[36m\]\u\[\e[0m\]\[\e[36m\]@\H\[\e[0m\]]──[\[\e[32m\]\w\[\e[0m\]]\` if [[ \$(git rev-parse --is-inside-work-tree 2>/dev/null) = true ]]; then echo ──[\e[34m\]\$(git rev-parse --abbrev-ref HEAD)\e[0m\]]; fi\`\n└──▶ "
 
 #
 # Direnv
