@@ -33,7 +33,7 @@ install_mac () {
   #install brew
   if [[ ! $(command -v brew) ]]
   then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
 
   brew install fzf rg tree direnv ccat
