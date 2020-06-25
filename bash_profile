@@ -59,9 +59,9 @@ fkill() {
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-# Keep more lines in .bash_history (default is 500)
-export HISTSIZE=5000
-export HISTFILESIZE=5000
+# Infinite lines in .bash_history (default is 500)
+export HISTSIZE=
+export HISTFILESIZE=
 # Don't put duplicate lines or lines starting with space in the history
 export HISTCONTROL=ignoreboth
 # Ignore one and two letter commands
