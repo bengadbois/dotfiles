@@ -11,7 +11,8 @@
 	prune = fetch --prune
 	
 	rekt = reset --hard
-
+	# For typoing `git add`
+	dad = "!curl https://icanhazdadjoke.com/ && echo"
 [apply]
 
 	# Detect whitespace errors when applying a patch
