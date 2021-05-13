@@ -61,6 +61,10 @@ set noswapfile
 "tab sizes
 set tabstop=4
 
+"yaml
+"set yaml-correct indentation
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 "go
 let g:go_fmt_command = "goimports"
 
