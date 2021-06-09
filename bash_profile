@@ -117,6 +117,7 @@ export HOMEBREW_NO_ANALYTICS=1
 # 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
+export GOBIN=$HOME/go/bin
 
 #
 # Bash completion
