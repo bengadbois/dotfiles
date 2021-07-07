@@ -9,7 +9,7 @@ Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 Plug 'sheerun/vim-polyglot'
 "visual
 Plug 'vim-airline/vim-airline'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'vim-airline/vim-airline-themes'
 "formatting
 Plug 'tpope/vim-sleuth'
 "misc
@@ -26,11 +26,10 @@ call plug#end()
 syntax enable
 syntax on
 set background=dark
-silent! color dracula "if started before plugins installed this would throw an error
 highlight VertSplit cterm=none gui=none
 set hlsearch
 set encoding=utf8
-let g:airline_theme='dracula'
+let g:airline_theme='base16_snazzy'
 let g:airline#extensions#branch#enabled = 1 "show branch name in statusbar
 let g:rg_highlight='true' "rg matches highlighted
 let g:gitgutter_max_signs = 9999  "allow gitgutter on files with many changes

@@ -1,0 +1,11 @@
+---
+font:
+  normal:
+    family: Hack
+    style: Regular
+  size: 13.0
+window:
+  decorations: none
+import:
+  - ~/.config/snazzy_alacritty.yml
+background_opacity: 0.94

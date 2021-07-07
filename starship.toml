@@ -1,0 +1,7 @@
+add_newline = false
+
+[directory]
+truncation_length = 12
+
+[golang]
+disabled = true
