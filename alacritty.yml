@@ -8,4 +8,3 @@ window:
   decorations: none
 import:
   - ~/.config/snazzy_alacritty.yml
-background_opacity: 0.94
