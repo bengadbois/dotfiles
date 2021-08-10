@@ -3,7 +3,7 @@
 install () {
   # dotfiles
   echo "Linking \$HOME/ dotfiles"
-  files=(tmux.conf vimrc gitconfig bash_profile zshrc shell_common gitignore alacritty)
+  files=(tmux.conf vimrc gitconfig bash_profile zshrc shell_common gitignore alacritty.yml)
   for file in "${files[@]}"
   do
 	echo "Linking $file"
