@@ -15,7 +15,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sleuth'
 "misc
 Plug 'spolu/dwm.vim'
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale' was causing extra gopls's to spin up
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
