@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 "git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 "language/file
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 Plug 'sheerun/vim-polyglot'
