@@ -8,3 +8,6 @@ disabled = true
 
 [aws]
 disabled = true
+
+[docker]
+disabled = true
