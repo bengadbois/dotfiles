@@ -19,7 +19,7 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'jremmen/vim-ripgrep'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 
@@ -32,13 +32,33 @@ set hlsearch
 set encoding=utf8
 let g:airline_theme='base16_snazzy'
 let g:airline#extensions#branch#enabled = 1 "show branch name in statusbar
-let g:rg_highlight='true' "rg matches highlighted
 let g:gitgutter_max_signs = 9999  "allow gitgutter on files with many changes
+
+"key mappings
+let mapleader = "\<Space>"
+let g:fzf_action = {
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
+nnoremap <c-p> :FZF<cr>
 
 "searching
 set ignorecase "case insensitive
 set smartcase  "use case if any caps used 
 set incsearch  "show match as search proceeds
+
+"taken from https://www.freecodecamp.org/news/how-to-search-project-wide-vim-ripgrep-ack/
+" Use ripgrep for ack
+" --vimgrep -> Needed to parse the rg response properly for ack.vim
+" --type-not sql -> Avoid huge sql file dumps as it slows down the search
+" --smart-case -> Search case insensitive if all lowercase pattern, Search case sensitively otherwise
+let g:ackprg = 'rg --vimgrep --type-not sql --smart-case'
+" Any empty ack search will search for the work the cursor is on
+let g:ack_use_cword_for_empty_search = 1
+" Don't jump to first match
+cnoreabbrev Ack Ack!
+" Maps <leader>/ so we're ready to type the search keyword
+nnoremap <Leader>/ :Ack!<Space>
 
 "indent
 set autoindent
@@ -96,10 +116,3 @@ if !exists("my_auto_commands_loaded")
     autocmd BufReadPre * let f=expand("<afile>") | if getfsize(f) > g:LargeFile | set eventignore+=FileType | setlocal noswapfile bufhidden=unload buftype=nowrite undolevels=-1 | else | set eventignore-=FileType | endif
   augroup END
 endif
-
-"key mappings
-let g:fzf_action = {
-      \ 'ctrl-s': 'split',
-      \ 'ctrl-v': 'vsplit'
-      \ }
-nnoremap <c-p> :FZF<cr>
