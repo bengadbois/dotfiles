@@ -9,5 +9,5 @@ disabled = true
 [aws]
 disabled = true
 
-[docker]
+[docker_context]
 disabled = true
