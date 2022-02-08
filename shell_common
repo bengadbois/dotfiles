@@ -97,11 +97,6 @@ alias py='python'
 #
 export HOMEBREW_NO_ANALYTICS=1
 
-#
-# Macos
-#
-export BASH_SILENCE_DEPRECATION_WARNING=1
-
 
 #
 # Go path
