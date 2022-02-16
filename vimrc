@@ -84,6 +84,8 @@ set tabstop=4
 "yaml
 "set yaml-correct indentation
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+"read .yaml.template files as .yaml
+autocmd BufEnter *.yaml.template :setlocal filetype=yaml
 
 "go
 let g:go_fmt_command = "goimports"
