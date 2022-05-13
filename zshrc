@@ -7,6 +7,11 @@ fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
 #
+# fix so ^ character isn't treated special by zsh
+#
+alias git="noglob git"
+
+#
 # Direnv
 #
 eval "$(direnv hook zsh)"
