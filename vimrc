@@ -1,3 +1,6 @@
+" switched to nvim, but leaving this here for backup compatibility issues
+" until switch is complete and never going back
+
 "plugins
 call plug#begin('~/.vim/plugged')
 
