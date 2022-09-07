@@ -106,6 +106,7 @@ export HOMEBREW_NO_ANALYTICS=1
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 export GOBIN=$HOME/go/bin
+export PATH=$PATH:$GOBIN
 
 #
 # For host-specific extra that shouldn't be
