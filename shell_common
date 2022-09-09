@@ -17,6 +17,7 @@ alias gopath='cd "$GOPATH"'
 function accio {
   ls -A | grep -i $1
 }
+eval "$(zoxide init zsh)"
 
 #
 # fzf based commands

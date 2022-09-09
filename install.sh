@@ -64,15 +64,15 @@ install_mac () {
   then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
-
-  brew install fzf rg tree direnv ccat jq alacritty
+ 
+  brew install fzf rg tree direnv ccat jq alacritty zoxide
   $(brew --prefix)/opt/fzf/install
 }
 
 install_linux() {
   echo "Installing packages on Linux"
 
-  sudo apt install --yes direnv jq
+  sudo apt install --yes direnv jq zoxide
 }
 
 if [ -d "$HOME/.dotfiles" ]
