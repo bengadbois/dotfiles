@@ -27,6 +27,7 @@ Plug 'tpope/vim-rhubarb' " github integration
 " other
 Plug 'spolu/dwm.vim' " tiling
 Plug 'tpope/vim-commentary' " commenting
+Plug 'nanotee/zoxide.vim' " dir navigation
 
 call plug#end()
 
