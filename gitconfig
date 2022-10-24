@@ -50,3 +50,4 @@
 	name = Ben Gadbois
 [push]
 	default = simple
+	autoSetupRemote = true
