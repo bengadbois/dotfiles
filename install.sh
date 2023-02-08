@@ -65,14 +65,14 @@ install_mac () {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
  
-  brew install fzf rg tree direnv ccat jq alacritty zoxide
+  brew install fzf rg tree direnv ccat jq alacritty zoxide neovim
   $(brew --prefix)/opt/fzf/install
 }
 
 install_linux() {
   echo "Installing packages on Linux"
 
-  sudo apt install --yes direnv jq zoxide
+  sudo apt install --yes direnv jq zoxide neovim
 }
 
 if [ -d "$HOME/.dotfiles" ]
