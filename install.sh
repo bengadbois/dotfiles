@@ -73,7 +73,15 @@ install_mac () {
 install_linux() {
   echo "Installing packages on Linux"
 
-  sudo apt install --yes direnv jq zoxide neovim build-essential python3-venv
+  sudo apt install --yes direnv jq zoxide build-essential python3-venv
+
+  # nvim install from https://github.com/neovim/neovim/wiki/Installing-Neovim#appimage-universal-linux-package
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+  chmod u+x nvim.appimage
+  ./nvim.appimage --appimage-extract
+  ./squashfs-root/AppRun --version
+  sudo mv squashfs-root /
+  sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 }
 
 if [ -d "$HOME/.dotfiles" ]
