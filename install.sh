@@ -73,7 +73,7 @@ install_mac () {
 install_linux() {
   echo "Installing packages on Linux"
 
-  sudo apt install --yes direnv jq zoxide neovim build-essential 
+  sudo apt install --yes direnv jq zoxide neovim build-essential python3-venv
 }
 
 if [ -d "$HOME/.dotfiles" ]
