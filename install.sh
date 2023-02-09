@@ -72,7 +72,7 @@ install_mac () {
 install_linux() {
   echo "Installing packages on Linux"
 
-  sudo apt install --yes direnv jq zoxide neovim
+  sudo apt install --yes direnv jq zoxide neovim build-essential 
 }
 
 if [ -d "$HOME/.dotfiles" ]
