@@ -26,7 +26,8 @@ install () {
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   ln -sf "$HOME/.dotfiles/config/nvim" "$HOME/.config/nvim"
-  vim +PlugInstall +qall
+  # 'vim' alias may not yet be setup
+  nvim +PlugInstall +qall
 
   # shell
   sh -c "$(curl -fsSL https://starship.rs/install.sh)"
