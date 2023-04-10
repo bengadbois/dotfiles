@@ -15,3 +15,6 @@ set tabstop=4
 
 " code completion
 autocmd VimEnter * :COQnow
+
+" vim/OS shared clipboard
+set clipboard=unnamed
