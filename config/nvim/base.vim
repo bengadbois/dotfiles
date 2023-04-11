@@ -1,4 +1,4 @@
-" key mappings
+" Key maps
 let mapleader = "\<Space>"
 let g:fzf_action = {
       \ 'ctrl-s': 'split',
@@ -6,15 +6,15 @@ let g:fzf_action = {
       \ }
 nnoremap <c-p> :FZF<cr>
 
-" indent
+" Indentation
 set autoindent
 set cindent
 
-" tab sizes
+" Tab sizes
 set tabstop=4
 
-" code completion
+" Code completion
 autocmd VimEnter * :COQnow
 
-" vim/OS shared clipboard
+" Vim/OS shared clipboard
 set clipboard=unnamed

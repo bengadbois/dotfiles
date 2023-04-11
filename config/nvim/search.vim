@@ -1,8 +1,9 @@
-set ignorecase "case insensitive
-set smartcase  "use case if any caps used
-set incsearch  "show match as search proceeds
+" Case sensitive only when an upper-case letter used
+set ignorecase smartcase
+" Show match as search proceeds
+set incsearch  
 
-"taken from https://www.freecodecamp.org/news/how-to-search-project-wide-vim-ripgrep-ack/
+" Taken from https://www.freecodecamp.org/news/how-to-search-project-wide-vim-ripgrep-ack/
 " Use ripgrep for ack
 " --vimgrep -> Needed to parse the rg response properly for ack.vim
 " --type-not sql -> Avoid huge sql file dumps as it slows down the search

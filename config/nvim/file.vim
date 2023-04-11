@@ -1,13 +1,13 @@
-"yaml
-"set yaml-correct indentation
+" YAML
+" Set yaml-correct indentation
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-"read .yaml.template files as .yaml
+" Read .yaml.template files as .yaml
 autocmd BufEnter *.yaml.template :setlocal filetype=yaml
 
-"ignore
+" Ignore files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o
 
-"temp files
+" No temp files
 set nobackup
 set nowritebackup
 set noswapfile

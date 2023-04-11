@@ -1,6 +1,6 @@
 let g:go_fmt_command = "goimports"
 
-" run :GoBuild or :GoTestCompile based on the go file
+" Run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
   let l:file = expand('%')
   if l:file =~# '^\f\+_test\.go$'
