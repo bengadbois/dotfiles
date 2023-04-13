@@ -7,6 +7,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " smart highlighting
 Plug 'dense-analysis/ale' " linting
 Plug 'sheerun/vim-polyglot' " multi language pack
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' } " golang
+Plug 'ntpeters/vim-better-whitespace' " trailing whitespace
 
 " Appearance
 Plug 'vim-airline/vim-airline' " statusline
