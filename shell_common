@@ -103,7 +103,7 @@ export HOMEBREW_NO_ANALYTICS=1
 
 #
 # Go path
-# 
+#
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 export GOBIN=$HOME/go/bin
