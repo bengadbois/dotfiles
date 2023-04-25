@@ -8,6 +8,7 @@ Plug 'dense-analysis/ale' " linting
 Plug 'sheerun/vim-polyglot' " multi language pack
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' } " golang
 Plug 'ntpeters/vim-better-whitespace' " trailing whitespace
+Plug 'AndrewRadev/linediff.vim' " diff within same file
 
 " Appearance
 Plug 'vim-airline/vim-airline' " statusline
