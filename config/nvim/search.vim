@@ -2,8 +2,8 @@
 set ignorecase smartcase
 " Show match as search proceeds
 set incsearch
-" Clear the search buffer when hitting enter
-:nnoremap <CR> :nohlsearch<cr>
+" Clear the search buffer when hitting ctrl+c
+:nnoremap <c-c> :nohlsearch<cr>
 
 " Taken from https://www.freecodecamp.org/news/how-to-search-project-wide-vim-ripgrep-ack/
 " Use ripgrep for ack
