@@ -14,6 +14,7 @@ Plug 'AndrewRadev/linediff.vim' " diff within same file
 Plug 'vim-airline/vim-airline' " statusline
 Plug 'vim-airline/vim-airline-themes' " statusline theme
 Plug 'tpope/vim-sleuth' " smart tabbing
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' } " theme
 
 " Search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf

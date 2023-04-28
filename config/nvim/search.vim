@@ -3,6 +3,7 @@ set ignorecase smartcase
 " Show match as search proceeds
 set incsearch
 " Clear the search buffer when hitting ctrl+c
+set hlsearch
 :nnoremap <c-c> :nohlsearch<cr>
 
 " Telescope keymaps

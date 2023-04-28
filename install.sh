@@ -31,7 +31,11 @@ install () {
 
   # shell
   sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-  curl -fsSL https://raw.githubusercontent.com/alebelcor/alacritty-snazzy/master/snazzy.yml -o "$HOME/.config/snazzy_alacritty.yml"
+  mkdir -p "$HOME/.config/alacritty/catppuccin"
+  curl -fsSL https://raw.githubusercontent.com/catppuccin/alacritty/main/catppuccin-latte.yml -o "$HOME/.config/alacritty/catppuccin/catppuccin-latte.yml"
+  curl -fsSL https://raw.githubusercontent.com/catppuccin/alacritty/main/catppuccin-frappe.yml -o "$HOME/.config/alacritty/catppuccin/catppuccin-frappe.yml"
+  curl -fsSL https://raw.githubusercontent.com/catppuccin/alacritty/main/catppuccin-macchiato.yml -o "$HOME/.config/alacritty/catppuccin/catppuccin-macchiato.yml"
+  curl -fsSL https://raw.githubusercontent.com/catppuccin/alacritty/main/catppuccin-mocha.yml -o "$HOME/.config/alacritty/catppuccin/catppuccin-mocha.yml"
 
   # zsh
   mkdir -p "$HOME/.zsh"
