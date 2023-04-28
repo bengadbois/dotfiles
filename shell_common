@@ -23,11 +23,11 @@ eval "$(zoxide init zsh)"
 # fzf based commands
 #
 
-# v - fzf preview and open files in nvim
+# v - fuzzy preview and open files in nvim
 function v() {
   if [ -z "$1" ];
   then
-    fzf --preview "(ccat --color=always {} || cat {})" --bind "enter:execute(nvim {})"
+    nvim -c "Telescope find_files"
   else
     # open directly
     nvim "$1"

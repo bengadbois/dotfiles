@@ -18,7 +18,9 @@ Plug 'tpope/vim-sleuth' " smart tabbing
 " Search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf
 Plug 'junegunn/fzf.vim' " fzf
-Plug 'mileszs/ack.vim' " ripgrep
+Plug 'nvim-lua/plenary.nvim' " dependency for telescope
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' } " telescope
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " faster telescope search
 
 " Git
 Plug 'airblade/vim-gitgutter' " git status
@@ -34,3 +36,4 @@ call plug#end()
 
 
 exec 'luafile' expand(g:custom_path . 'lua/treesitter.lua')
+exec 'luafile' expand(g:custom_path . 'lua/telescope.lua')
