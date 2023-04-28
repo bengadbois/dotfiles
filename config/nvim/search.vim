@@ -10,3 +10,6 @@ nnoremap <Leader>/ <cmd>Telescope live_grep<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Aerial keymaps
+nnoremap <leader>a <cmd>AerialToggle!<cr>

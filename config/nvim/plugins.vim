@@ -21,6 +21,7 @@ Plug 'junegunn/fzf.vim' " fzf
 Plug 'nvim-lua/plenary.nvim' " dependency for telescope
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' } " telescope
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " faster telescope search
+Plug 'stevearc/aerial.nvim' " navigation
 
 " Git
 Plug 'airblade/vim-gitgutter' " git status
@@ -37,3 +38,4 @@ call plug#end()
 
 exec 'luafile' expand(g:custom_path . 'lua/treesitter.lua')
 exec 'luafile' expand(g:custom_path . 'lua/telescope.lua')
+exec 'luafile' expand(g:custom_path . 'lua/aerial.lua')
