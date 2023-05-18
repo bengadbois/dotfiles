@@ -24,13 +24,19 @@ eval "$(zoxide init zsh)"
 #
 
 # v - fuzzy preview and open files in nvim
+# if there's stdin (e.g. `ls | v`), will view in nvim
 function v() {
-  if [ -z "$1" ];
+  if [ -t 0 ];
   then
-    nvim -c "Telescope find_files"
+    if [ -z "$1" ];
+    then
+      nvim -c "Telescope find_files"
+    else
+      # open directly
+      nvim "$1"
+    fi
   else
-    # open directly
-    nvim "$1"
+    nvim -R < /dev/stdin
   fi
 }
 
