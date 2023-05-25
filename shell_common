@@ -87,6 +87,15 @@ function extract () {
 }
 
 #
+# show remote server TLS cert
+# first argument is the server, second is port (optional)
+function remotecert() {
+  address="$1"
+  port="${2:-443}"
+  echo | openssl s_client -showcerts -servername "$address" -connect "${address}:${port}" 2>/dev/null | openssl x509 -inform pem -noout -text
+}
+
+#
 # Editor
 #
 
