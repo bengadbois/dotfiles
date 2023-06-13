@@ -11,8 +11,8 @@ Plug 'ntpeters/vim-better-whitespace' " trailing whitespace
 Plug 'AndrewRadev/linediff.vim' " diff within same file
 
 " Appearance
-Plug 'vim-airline/vim-airline' " statusline
-Plug 'vim-airline/vim-airline-themes' " statusline theme
+Plug 'nvim-lualine/lualine.nvim' " statusline
+Plug 'nvim-tree/nvim-web-devicons' " statusline icons
 Plug 'tpope/vim-sleuth' " smart tabbing
 
 " Search
@@ -39,3 +39,4 @@ call plug#end()
 exec 'luafile' expand(g:custom_path . 'lua/treesitter.lua')
 exec 'luafile' expand(g:custom_path . 'lua/telescope.lua')
 exec 'luafile' expand(g:custom_path . 'lua/aerial.lua')
+exec 'luafile' expand(g:custom_path . 'lua/lualine.lua')
