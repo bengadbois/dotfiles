@@ -12,7 +12,6 @@ Plug 'AndrewRadev/linediff.vim' " diff within same file
 
 " Appearance
 Plug 'nvim-lualine/lualine.nvim' " statusline
-Plug 'nvim-tree/nvim-web-devicons' " statusline icons
 Plug 'tpope/vim-sleuth' " smart tabbing
 
 " Search
