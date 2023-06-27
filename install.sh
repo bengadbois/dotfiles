@@ -66,7 +66,7 @@ install_mac () {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
 
-  brew install fzf rg tree direnv ccat jq alacritty zoxide neovim fd
+  brew install fzf rg tree direnv ccat jq alacritty zoxide neovim fd prettier
   $(brew --prefix)/opt/fzf/install
 }
 

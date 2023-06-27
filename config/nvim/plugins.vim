@@ -9,6 +9,9 @@ Plug 'sheerun/vim-polyglot' " multi language pack
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' } " golang
 Plug 'ntpeters/vim-better-whitespace' " trailing whitespace
 Plug 'AndrewRadev/linediff.vim' " diff within same file
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'for': ['json', 'markdown', 'yaml', 'html'] }
 
 " Appearance
 Plug 'nvim-lualine/lualine.nvim' " statusline
