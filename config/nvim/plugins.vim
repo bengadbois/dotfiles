@@ -21,7 +21,7 @@ Plug 'tpope/vim-sleuth' " smart tabbing
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf
 Plug 'junegunn/fzf.vim' " fzf
 Plug 'nvim-lua/plenary.nvim' " dependency for telescope
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' } " telescope
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' } " telescope
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " faster telescope search
 Plug 'stevearc/aerial.nvim' " navigation
 
