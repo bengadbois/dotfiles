@@ -24,6 +24,8 @@ Plug 'nvim-lua/plenary.nvim' " dependency for telescope
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' } " telescope
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " faster telescope search
 Plug 'stevearc/aerial.nvim' " navigation
+Plug 'nvim-lua/popup.nvim' " dependency for telescope-zoxide
+Plug 'jvgrootveld/telescope-zoxide' " dir navigation
 
 " Git
 Plug 'airblade/vim-gitgutter' " git status
@@ -33,7 +35,6 @@ Plug 'tpope/vim-rhubarb' " github integration
 " Other
 Plug 'spolu/dwm.vim' " tiling
 Plug 'tpope/vim-commentary' " commenting
-Plug 'nanotee/zoxide.vim' " dir navigation
 
 call plug#end()
 

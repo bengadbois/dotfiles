@@ -10,9 +10,7 @@ nnoremap <Leader>/ <cmd>Telescope live_grep<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-" Zoxide
-nnoremap <leader>fz :Z<space>
+nnoremap <leader>fd <cmd>Telescope zoxide list<cr>
 
 " Aerial keymaps
 nnoremap <leader>a <cmd>AerialToggle!<cr>
