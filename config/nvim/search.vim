@@ -3,7 +3,7 @@ set ignorecase smartcase
 " Show match as search proceeds
 set incsearch
 " Clear the search buffer when hitting ctrl+c
-:nnoremap <c-c> :nohlsearch<cr>
+:nnoremap <C-c> :nohlsearch<cr>
 
 " Telescope keymaps
 nnoremap <Leader>/ <cmd>Telescope live_grep<cr>
