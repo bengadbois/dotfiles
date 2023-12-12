@@ -3,7 +3,13 @@ add_newline = false
 [directory]
 truncation_length = 12
 
+[git_status]
+disabled = true
+
 [golang]
+disabled = true
+
+[ruby]
 disabled = true
 
 [aws]
