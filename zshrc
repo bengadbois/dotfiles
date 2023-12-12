@@ -4,7 +4,12 @@
 # git completion
 #
 fpath=(~/.zsh $fpath)
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+# only compinit every 24hrs, use cache
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
 
 #
 # fix so ^ character isn't treated special by zsh
