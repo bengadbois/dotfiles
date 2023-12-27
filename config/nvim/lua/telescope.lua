@@ -2,6 +2,10 @@ require('telescope').setup{
   defaults = {
   },
   pickers = {
+    buffers = {
+      ignore_current_buffer = true,
+      sort_mru = true,
+    },
     git_files = {
       use_git_root = false,
       show_untracked = true,
