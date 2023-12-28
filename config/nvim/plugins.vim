@@ -35,6 +35,7 @@ Plug 'tpope/vim-rhubarb' " github integration
 " Other
 Plug 'spolu/dwm.vim' " tiling
 Plug 'tpope/vim-commentary' " commenting
+Plug 'folke/which-key.nvim' " keybinding help
 
 call plug#end()
 
@@ -43,3 +44,4 @@ exec 'luafile' expand(g:custom_path . 'lua/treesitter.lua')
 exec 'luafile' expand(g:custom_path . 'lua/telescope.lua')
 exec 'luafile' expand(g:custom_path . 'lua/aerial.lua')
 exec 'luafile' expand(g:custom_path . 'lua/lualine.lua')
+exec 'luafile' expand(g:custom_path . 'lua/which-key.lua')
