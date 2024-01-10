@@ -1,0 +1,11 @@
+import = ["/Users/bgadbois/.config/snazzy_alacritty.toml"]
+
+[font]
+size = 15.0
+
+[font.normal]
+family = "Hack"
+style = "Regular"
+
+[window]
+decorations = "none"

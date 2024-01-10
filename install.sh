@@ -3,7 +3,7 @@
 install () {
   # dotfiles
   echo "Linking \$HOME/ dotfiles"
-  files=(tmux.conf vimrc gitconfig bash_profile zshrc shell_common gitignore alacritty.yml)
+  files=(tmux.conf vimrc gitconfig bash_profile zshrc shell_common gitignore alacritty.toml)
   for file in "${files[@]}"
   do
 	echo "Linking $file"
@@ -56,6 +56,9 @@ install () {
   else
     install_linux
   fi
+
+  # TODO remove this when snazzy_alacritty updates to having at toml file https://github.com/alebelcor/alacritty-snazzy/pull/2
+  alacritty migrate -c "$HOME/.config/snazzy_alacritty.yml"
 }
 
 install_mac () {
