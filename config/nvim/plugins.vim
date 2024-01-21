@@ -16,6 +16,7 @@ Plug 'prettier/vim-prettier', {
 " Appearance
 Plug 'nvim-lualine/lualine.nvim' " statusline
 Plug 'tpope/vim-sleuth' " smart tabbing
+Plug 'nvim-tree/nvim-web-devicons' " optional dependency for oil and telescope
 
 " Search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf
