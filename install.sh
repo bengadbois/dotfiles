@@ -69,7 +69,8 @@ install_mac () {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
 
-  brew install fzf rg tree direnv ccat jq alacritty zoxide neovim fd prettier
+  brew tap homebrew/cask-fonts
+  brew install fzf rg tree direnv ccat jq alacritty zoxide neovim fd prettier font-hack-nerd-font
   $(brew --prefix)/opt/fzf/install
 }
 
