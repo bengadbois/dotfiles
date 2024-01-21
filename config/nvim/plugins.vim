@@ -26,6 +26,7 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " faster teles
 Plug 'stevearc/aerial.nvim' " navigation
 Plug 'nvim-lua/popup.nvim' " dependency for telescope-zoxide
 Plug 'jvgrootveld/telescope-zoxide' " dir navigation
+Plug 'stevearc/oil.nvim' " file explorer
 
 " Git
 Plug 'airblade/vim-gitgutter' " git status
@@ -45,3 +46,4 @@ exec 'luafile' expand(g:custom_path . 'lua/telescope.lua')
 exec 'luafile' expand(g:custom_path . 'lua/aerial.lua')
 exec 'luafile' expand(g:custom_path . 'lua/lualine.lua')
 exec 'luafile' expand(g:custom_path . 'lua/which-key.lua')
+exec 'luafile' expand(g:custom_path . 'lua/oil.lua')
