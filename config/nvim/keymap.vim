@@ -16,3 +16,7 @@ nnoremap - <cmd>Oil<cr>
 
 " fugitive keymap
 nnoremap <leader>g <cmd>call feedkeys(':Git ')<cr>
+
+" buffer switching
+nnoremap <tab> <cmd>:bnext<cr>
+nnoremap <s-tab> <cmd>:bprev<cr>
