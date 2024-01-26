@@ -1,3 +1,6 @@
+" use ; instead of : for commands
+nnoremap ; :
+
 " Clear the search buffer when hitting ctrl+c
 nnoremap <C-c> :nohlsearch<cr>
 
