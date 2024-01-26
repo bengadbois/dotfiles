@@ -15,7 +15,9 @@ nnoremap <leader>a <cmd>AerialToggle!<cr>
 nnoremap - <cmd>Oil<cr>
 
 " fugitive keymap
-nnoremap <leader>g <cmd>call feedkeys(':Git ')<cr>
+nnoremap <leader>gb <cmd>GBrowse<cr>
+" line range select in visual mode
+xnoremap <leader>gb :'<'>GBrowse<cr>
 
 " buffer switching
 nnoremap <tab> <cmd>:bnext<cr>
