@@ -1,10 +1,3 @@
-" Key maps
-let mapleader = "\<Space>"
-let g:fzf_action = {
-      \ 'ctrl-s': 'split',
-      \ 'ctrl-v': 'vsplit'
-      \ }
-
 " Indentation
 set autoindent
 set cindent

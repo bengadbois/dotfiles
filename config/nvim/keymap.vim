@@ -1,5 +1,14 @@
+" set leader
+let mapleader = "\<Space>"
+
+let g:fzf_action = {
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
+
 " use ; instead of : for commands
 nnoremap ; :
+
 
 " Clear the search buffer when hitting ctrl+c
 nnoremap <C-c> :nohlsearch<cr>
