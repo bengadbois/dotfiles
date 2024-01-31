@@ -38,6 +38,7 @@ Plug 'tpope/vim-rhubarb' " github integration
 " Plug 'spolu/dwm.vim' " tiling
 Plug 'tpope/vim-commentary' " commenting
 Plug 'folke/which-key.nvim' " keybinding help
+Plug 'm4xshen/hardtime.nvim' " get better at vim
 
 call plug#end()
 
@@ -48,3 +49,4 @@ exec 'luafile' expand(g:custom_path . 'lua/aerial.lua')
 exec 'luafile' expand(g:custom_path . 'lua/lualine.lua')
 exec 'luafile' expand(g:custom_path . 'lua/which-key.lua')
 exec 'luafile' expand(g:custom_path . 'lua/oil.lua')
+exec 'luafile' expand(g:custom_path . 'lua/hardtime.lua')
