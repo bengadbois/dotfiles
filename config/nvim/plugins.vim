@@ -35,7 +35,7 @@ Plug 'tpope/vim-fugitive' " git commands
 Plug 'tpope/vim-rhubarb' " github integration
 
 " Other
-Plug 'spolu/dwm.vim' " tiling
+" Plug 'spolu/dwm.vim' " tiling
 Plug 'tpope/vim-commentary' " commenting
 Plug 'folke/which-key.nvim' " keybinding help
 
