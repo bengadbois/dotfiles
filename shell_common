@@ -101,6 +101,16 @@ function remotecert() {
 }
 
 #
+# recusive find/replace within all files
+# works on mac's `find`, may not on linux
+#
+function findreplace() {
+  match="$1"
+  replacement="$2"
+  find . -type f -exec sed -i '' s/${match}/${replacement}/g {} +
+}
+
+#
 # Editor
 #
 
