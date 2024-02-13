@@ -36,6 +36,10 @@
 [http "https://gopkg.in"]
 	followRedirects = true
 
+[rerere]
+	# autofix repeated known conflicts from rebases and such
+	enabled = true
+
 [user]
 	email = git@bengadbois.com
 	name = Ben Gadbois
