@@ -1,6 +1,6 @@
 #!/bin/bash
 
-install () {
+setup () {
   # dotfiles
   echo "Linking \$HOME/ dotfiles"
   files=(tmux.conf vimrc gitconfig bash_profile zshrc shell_common gitignore alacritty.toml)
@@ -52,16 +52,16 @@ install () {
 
   if [[ $(uname) == Darwin ]]
   then
-    install_mac
+    setup_mac
   else
-    install_linux
+    setup_linux
   fi
 
   # TODO remove this when snazzy_alacritty updates to having at toml file https://github.com/alebelcor/alacritty-snazzy/pull/2
   alacritty migrate -c "$HOME/.config/snazzy_alacritty.yml"
 }
 
-install_mac () {
+setup_mac () {
   echo "Installing packages on Mac"
   # install brew
   if [[ ! $(command -v brew) ]]
@@ -74,7 +74,7 @@ install_mac () {
   $(brew --prefix)/opt/fzf/install
 }
 
-install_linux() {
+setup_linux() {
   echo "Installing packages on Linux"
 
   sudo apt install --yes direnv jq zoxide build-essential python3-venv fd-find
@@ -93,12 +93,12 @@ then
   echo "$HOME/.dotfiles already exists, will attempt to update it"
   cd "$HOME/.dotfiles"
   git pull
-  install
+  setup
 else
   echo "Installing dotfiles"
   git clone https://github.com/bengadbois/dotfiles.git "$HOME/.dotfiles"
   cd "$HOME/.dotfiles"
-  install
+  setup
 fi
 
 exit 0
