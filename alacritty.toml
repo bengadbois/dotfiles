@@ -9,3 +9,4 @@ style = "Regular"
 
 [window]
 decorations = "none"
+opacity = 0.96
