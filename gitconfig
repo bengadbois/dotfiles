@@ -2,19 +2,15 @@
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
-	# Show the diff between the latest commit and the current state
-	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-
 	co = checkout
 	st = status
 	br = branch
 	prune = fetch --prune
 
-	rekt = reset --hard
 	# For typoing `git add`
 	dad = "!curl https://icanhazdadjoke.com/ && echo"
-[apply]
 
+[apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 
@@ -30,15 +26,7 @@
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
-[color]
-
-	# Use colors in Git commands that are capable of colored output when
-	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-	ui = auto
-
-
 [help]
-
 	# Automatically correct and execute mistyped commands
 	autocorrect = 10
 
@@ -48,6 +36,7 @@
 [user]
 	email = git@bengadbois.com
 	name = Ben Gadbois
+
 [push]
 	default = simple
 	autoSetupRemote = true
