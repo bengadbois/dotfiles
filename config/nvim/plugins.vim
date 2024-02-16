@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 " Language/file
 Plug 'neovim/nvim-lspconfig' " lsp client
 Plug 'ms-jpq/coq_nvim', { 'do': ':COQdeps' } " code completion
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'} " default set of snippets for coq
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " smart highlighting
 Plug 'dense-analysis/ale' " linting
 Plug 'sheerun/vim-polyglot' " multi language pack
@@ -43,6 +44,7 @@ Plug 'm4xshen/hardtime.nvim' " get better at vim
 call plug#end()
 
 
+exec 'luafile' expand(g:custom_path . 'lua/lspconfig.lua')
 exec 'luafile' expand(g:custom_path . 'lua/treesitter.lua')
 exec 'luafile' expand(g:custom_path . 'lua/telescope.lua')
 exec 'luafile' expand(g:custom_path . 'lua/aerial.lua')
