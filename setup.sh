@@ -71,7 +71,7 @@ setup_mac () {
 
   brew tap homebrew/cask-fonts
   brew install fzf rg tree direnv ccat jq alacritty zoxide neovim fd prettier font-hack-nerd-font
-  $(brew --prefix)/opt/fzf/install
+  "$(brew --prefix)/opt/fzf/install"
 }
 
 setup_linux() {
@@ -91,14 +91,14 @@ setup_linux() {
 if [ -d "$HOME/.dotfiles" ]
 then
   echo "$HOME/.dotfiles already exists, will attempt to update it"
-  cd "$HOME/.dotfiles"
+  pushd "$HOME/.dotfiles" || return
   git pull
   setup
+  popd || return
 else
   echo "Installing dotfiles"
   git clone https://github.com/bengadbois/dotfiles.git "$HOME/.dotfiles"
-  cd "$HOME/.dotfiles"
+  pushd "$HOME/.dotfiles" || return
   setup
+  popd || return
 fi
-
-exit 0
