@@ -17,6 +17,9 @@
 [branch]
 	sort = -committerdate
 
+[commit]
+	verbose = true
+
 [core]
 	editor=vim
 
