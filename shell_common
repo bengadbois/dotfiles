@@ -54,6 +54,45 @@ function fkill() {
   fi
 }
 
+# fuzzy git branch selection
+function fzf-git-branch() {
+    git rev-parse HEAD > /dev/null 2>&1 || return
+
+    git branch --color=always --sort=-committerdate --format='%(if)%(HEAD)%(then)%(color:green)%(end)%(committerdate:relative)%09%(refname:short)%(color:reset)' |
+        grep -v HEAD |
+        fzf --height 50% --ansi --no-multi --preview-window right:65% \
+            --preview 'git log -n 50 --color=always --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed "s/.*\t//" <<< {})' |
+        sed "s/.*\t//"
+}
+function fzf-git-checkout() {
+    git rev-parse HEAD > /dev/null 2>&1 || return
+
+    local branch
+
+    branch=$(fzf-git-branch)
+    if [[ "$branch" = "" ]]; then
+        echo "No branch selected."
+        return
+    fi
+
+    git checkout $branch;
+}
+function fzf-git-branch-delete() {
+    git rev-parse HEAD > /dev/null 2>&1 || return
+
+    local branch
+
+    branch=$(fzf-git-branch)
+    if [[ "$branch" = "" ]]; then
+        echo "No branch selected."
+        return
+    fi
+
+    git branch -D $branch;
+}
+alias br=fzf-git-checkout
+alias brd=fzf-git-branch-delete
+
 # zoxide+fzf interactive dir navigation
 function zz() {
   _ZO_FZF_OPTS="--height=100 --layout=default --info=hidden" zi
