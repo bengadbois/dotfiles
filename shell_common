@@ -87,6 +87,18 @@ function fzf-git-branch-delete() {
         echo "No branch selected."
         return
     fi
+    if [[ "$branch" = "master" ]]; then
+        echo "Won't delete master."
+        return
+    fi
+    if [[ "$branch" = "main" ]]; then
+        echo "Won't delete main."
+        return
+    fi
+    if [[ "$(git log --branches --not --remotes)" != "" ]]; then
+      echo "Branch '$branch' has unpushed commits, not deleting."
+      return
+    fi
 
     git branch -D $branch;
 }
