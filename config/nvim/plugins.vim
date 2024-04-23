@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'neovim/nvim-lspconfig' " lsp client
 Plug 'ms-jpq/coq_nvim', { 'do': ':COQdeps' } " code completion
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'} " default set of snippets for coq
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " smart highlighting
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " smart highlighting, biscuits dependency
 Plug 'dense-analysis/ale' " linting
 Plug 'sheerun/vim-polyglot' " multi language pack
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' } " golang
@@ -18,6 +18,7 @@ Plug 'prettier/vim-prettier', {
 Plug 'nvim-lualine/lualine.nvim' " statusline
 Plug 'tpope/vim-sleuth' " smart tabbing
 Plug 'nvim-tree/nvim-web-devicons' " optional dependency for oil and telescope
+Plug 'code-biscuits/nvim-biscuits' " line end annotations
 
 " Search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf
@@ -48,6 +49,7 @@ exec 'luafile' expand(g:custom_path . 'plugins/lspconfig.lua')
 exec 'luafile' expand(g:custom_path . 'plugins/treesitter.lua')
 exec 'luafile' expand(g:custom_path . 'plugins/telescope.lua')
 exec 'luafile' expand(g:custom_path . 'plugins/aerial.lua')
+exec 'luafile' expand(g:custom_path . 'plugins/biscuits.lua')
 exec 'luafile' expand(g:custom_path . 'plugins/lualine.lua')
 exec 'luafile' expand(g:custom_path . 'plugins/which-key.lua')
 exec 'luafile' expand(g:custom_path . 'plugins/oil.lua')
