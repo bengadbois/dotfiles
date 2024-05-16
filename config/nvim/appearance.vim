@@ -10,3 +10,7 @@ let g:gitgutter_max_signs = 9999
 " line numbers
 set number
 set relativenumber
+
+" transparent background
+highlight Normal guibg=none ctermbg=none
+highlight NonText guibg=none ctermbg=none
