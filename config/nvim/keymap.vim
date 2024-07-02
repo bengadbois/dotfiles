@@ -30,3 +30,8 @@ xnoremap <leader>gb :'<'>GBrowse<cr>
 " buffer switching
 nnoremap <tab> <cmd>:bnext<cr>
 nnoremap <s-tab> <cmd>:bprev<cr>
+nnoremap <leader>bd <cmd>:bd<cr>
+
+" LSP
+nnoremap gd <cmd>lua vim.lsp.buf.definition()<cr>
+nnoremap <leader>rr <cmd>lua vim.lsp.buf.rename()<cr>
