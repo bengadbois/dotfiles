@@ -10,6 +10,8 @@ let g:gitgutter_max_signs = 9999
 " line numbers
 set number
 set relativenumber
+" hide mode, already in status line
+set noshowmode
 
 " transparent background
 highlight Normal guibg=none ctermbg=none
