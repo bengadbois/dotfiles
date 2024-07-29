@@ -20,11 +20,6 @@ setup () {
   done
 
   # vim
-  curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs \
-	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  # nvim
-  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   ln -sf "$HOME/.dotfiles/config/nvim" "$HOME/.config/nvim"
   # 'vim' alias may not yet be setup
   nvim +PlugInstall +qall
