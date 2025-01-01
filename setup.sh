@@ -72,7 +72,10 @@ setup_mac () {
 setup_linux() {
   echo "Installing packages on Linux"
 
-  sudo apt install --yes direnv jq zoxide build-essential python3-venv fd-find
+  sudo apt install --yes direnv jq zoxide build-essential python3-venv fd-find zsh
+
+  # switch to zsh, since likely bash
+  chsh -s $(which zsh)
 
   # nvim install from https://github.com/neovim/neovim/wiki/Installing-Neovim#appimage-universal-linux-package
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
