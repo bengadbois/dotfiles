@@ -25,7 +25,7 @@ setup () {
   nvim +PlugInstall +qall
 
   # shell
-  sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+  curl -sS "https://starship.rs/install.sh" | sh -s -- --force
   curl -fsSL https://raw.githubusercontent.com/alebelcor/alacritty-snazzy/master/snazzy.yml -o "$HOME/.config/snazzy_alacritty.yml"
 
   # zsh
