@@ -162,6 +162,7 @@ function findreplace() {
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export nvimdiff="nvim -d"
 
 #
 # Programs
