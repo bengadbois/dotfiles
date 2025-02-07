@@ -1,5 +1,9 @@
 #!/bin/bash
 
+BREW_PACKAGES=(fzf rg tree direnv ccat jq alacritty zoxide neovim fd prettier font-hack-nerd-font nvim tmux hyperfine)
+BREW_CASK_PACKAGES=(amethyst font-hack-nerd-font)
+APT_PACKAGES=(direnv jq zoxide build-essential python3-venv fd-find zsh)
+
 setup () {
   # dotfiles
   echo "Linking \$HOME/ dotfiles"
@@ -59,9 +63,8 @@ setup_mac () {
     NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
 
-  brew tap homebrew/cask-fonts
-  brew install --cask amethyst
-  brew install fzf rg tree direnv ccat jq alacritty zoxide neovim fd prettier font-hack-nerd-font nvim tmux hyperfine
+  brew install --cask $BREW_CASK_PACKAGES
+  brew install $BREW_PACKAGES
   "$(brew --prefix)/opt/fzf/install"
 
   # TODO remove this when snazzy_alacritty updates to having at toml file https://github.com/alebelcor/alacritty-snazzy/pull/2
@@ -71,7 +74,7 @@ setup_mac () {
 setup_linux() {
   echo "Installing packages on Linux"
 
-  sudo apt install --yes direnv jq zoxide build-essential python3-venv fd-find zsh
+  sudo apt install --yes $APT_PACKAGES
 
   # switch to zsh, since likely bash
   chsh -s $(which zsh)
