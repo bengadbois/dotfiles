@@ -60,6 +60,7 @@ setup_mac () {
   fi
 
   brew tap homebrew/cask-fonts
+  brew install --cask amethyst
   brew install fzf rg tree direnv ccat jq alacritty zoxide neovim fd prettier font-hack-nerd-font nvim
   "$(brew --prefix)/opt/fzf/install"
 
