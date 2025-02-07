@@ -21,8 +21,6 @@ setup () {
 
   # vim
   ln -sf "$HOME/.dotfiles/config/nvim" "$HOME/.config/nvim"
-  # 'vim' alias may not yet be setup
-  nvim +PlugInstall +qall
 
   # shell
   curl -sS "https://starship.rs/install.sh" | sh -s -- --force
