@@ -187,6 +187,11 @@ export GOBIN=$HOME/go/bin
 export PATH=$PATH:$GOBIN
 
 #
+# PATH
+#
+PATH=$PATH:/opt/homebrew/bin
+
+#
 # For host-specific extra that shouldn't be
 # added in here (security, specificness, etc.)
 #
