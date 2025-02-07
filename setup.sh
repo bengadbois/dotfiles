@@ -56,7 +56,7 @@ setup_mac () {
   # install brew
   if [[ ! $(command -v brew) ]]
   then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
 
   brew tap homebrew/cask-fonts
