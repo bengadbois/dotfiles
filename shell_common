@@ -192,6 +192,11 @@ export GOBIN=$HOME/go/bin
 export PATH=$PATH:$GOBIN
 
 #
+# Direnv
+#
+eval "$(direnv hook zsh)"
+
+#
 # For host-specific extra that shouldn't be
 # added in here (security, specificness, etc.)
 #

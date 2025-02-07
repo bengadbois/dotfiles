@@ -17,11 +17,6 @@ compinit -C
 alias git="noglob git"
 
 #
-# Direnv
-#
-eval "$(direnv hook zsh)"
-
-#
 # History
 #
 HISTSIZE=10000000
