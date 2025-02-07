@@ -61,7 +61,7 @@ setup_mac () {
 
   brew tap homebrew/cask-fonts
   brew install --cask amethyst
-  brew install fzf rg tree direnv ccat jq alacritty zoxide neovim fd prettier font-hack-nerd-font nvim tmux
+  brew install fzf rg tree direnv ccat jq alacritty zoxide neovim fd prettier font-hack-nerd-font nvim tmux hyperfine
   "$(brew --prefix)/opt/fzf/install"
 
   # TODO remove this when snazzy_alacritty updates to having at toml file https://github.com/alebelcor/alacritty-snazzy/pull/2
