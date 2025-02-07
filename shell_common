@@ -1,6 +1,11 @@
 # Everything that can be used by both bash and zsh
 
 #
+# PATH
+#
+PATH=$PATH:/opt/homebrew/bin
+
+#
 # Navigation
 #
 
@@ -185,11 +190,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 export GOBIN=$HOME/go/bin
 export PATH=$PATH:$GOBIN
-
-#
-# PATH
-#
-PATH=$PATH:/opt/homebrew/bin
 
 #
 # For host-specific extra that shouldn't be
