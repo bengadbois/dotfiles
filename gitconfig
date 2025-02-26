@@ -52,6 +52,11 @@
 	keepBackup = false
 	prompt = false
 
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+
 [rerere]
 	# autofix repeated known conflicts from rebases and such
 	enabled = true
