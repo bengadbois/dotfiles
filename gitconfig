@@ -41,6 +41,11 @@
 [difftool]
 	prompt = false
 
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+
 [http "https://gopkg.in"]
 	followRedirects = true
 
