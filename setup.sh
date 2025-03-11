@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BREW_PACKAGES=(fzf rg tree direnv ccat jq alacritty zoxide neovim fd prettier font-hack-nerd-font nvim tmux hyperfine qalculate-qt)
+BREW_PACKAGES=(fzf rg tree direnv ccat jq alacritty zoxide neovim fd prettier font-hack-nerd-font nvim tmux hyperfine qalculate-qt coreutils)
 BREW_CASK_PACKAGES=(amethyst font-hack-nerd-font)
 APT_PACKAGES=(direnv jq zoxide build-essential python3-venv fd-find zsh)
 
