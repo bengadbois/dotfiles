@@ -7,7 +7,7 @@ APT_PACKAGES=(direnv jq zoxide build-essential python3-venv fd-find zsh)
 setup () {
   # dotfiles
   echo "Linking \$HOME/ dotfiles"
-  files=(tmux.conf vimrc gitconfig bash_profile zshrc shell_common gitignore alacritty.toml)
+  files=(tmux.conf vimrc gitconfig bash_profile zshrc shell_common gitignore alacritty.toml aerospace.toml)
   for file in "${files[@]}"
   do
 	echo "Linking $file"
