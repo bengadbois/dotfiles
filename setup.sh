@@ -1,7 +1,7 @@
 #!/bin/bash
 
-BREW_PACKAGES=(fzf rg tree direnv ccat jq alacritty zoxide neovim fd prettier font-hack-nerd-font nvim tmux hyperfine qalculate-qt coreutils)
-BREW_CASK_PACKAGES=(amethyst font-hack-nerd-font)
+BREW_PACKAGES=(fzf rg tree direnv ccat jq alacritty zoxide direnv neovim fd prettier font-hack-nerd-font nvim tmux hyperfine qalculate-qt coreutils)
+BREW_CASK_PACKAGES=(nikitabobko/tap/aerospace font-hack-nerd-font)
 APT_PACKAGES=(direnv jq zoxide build-essential python3-venv fd-find zsh)
 
 setup () {
@@ -27,8 +27,13 @@ setup () {
   ln -sf "$HOME/.dotfiles/config/nvim" "$HOME/.config/nvim"
 
   # shell
+  if [ ! -d "/usr/local/bin" ] # default starship install location
+  then
+    sudo mkdir -p /usr/local/bin
+    sudo chmod 755 /usr/local/bin
+  fi
   curl -sS "https://starship.rs/install.sh" | sh -s -- --force
-  curl -fsSL https://raw.githubusercontent.com/alebelcor/alacritty-snazzy/master/snazzy.yml -o "$HOME/.config/snazzy_alacritty.yml"
+  curl -fsSL https://github.com/catppuccin/alacritty/raw/main/catppuccin-macchiato.toml --output-dir "$HOME/.config/"
 
   # zsh
   mkdir -p "$HOME/.zsh"
@@ -66,9 +71,6 @@ setup_mac () {
   brew install --cask $BREW_CASK_PACKAGES
   brew install $BREW_PACKAGES
   "$(brew --prefix)/opt/fzf/install"
-
-  # TODO remove this when snazzy_alacritty updates to having at toml file https://github.com/alebelcor/alacritty-snazzy/pull/2
-  alacritty migrate -c "$HOME/.config/snazzy_alacritty.yml"
 }
 
 setup_linux() {
