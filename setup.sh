@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BREW_PACKAGES=(fzf rg tree direnv ccat jq alacritty zoxide direnv neovim fd prettier font-hack-nerd-font nvim tmux hyperfine qalculate-qt coreutils)
+BREW_PACKAGES=(fzf rg tree direnv ccat jq alacritty zoxide direnv neovim fd prettier font-hack-nerd-font nvim tmux hyperfine qalculate-qt coreutils morantron/tmux-fingers)
 BREW_CASK_PACKAGES=(nikitabobko/tap/aerospace font-hack-nerd-font)
 APT_PACKAGES=(direnv jq zoxide build-essential python3-venv fd-find zsh)
 
@@ -51,6 +51,9 @@ setup () {
   then
     curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh -o "$HOME/.zsh/_git"
   fi
+
+  # tmux
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
   if [[ $(uname) == Darwin ]]
   then
