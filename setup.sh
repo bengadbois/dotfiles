@@ -2,7 +2,6 @@
 
 BREW_PACKAGES=(fzf rg tree direnv ccat jq alacritty zoxide direnv neovim fd prettier font-hack-nerd-font nvim tmux hyperfine qalculate-qt coreutils morantron/tmux-fingers)
 BREW_CASK_PACKAGES=(nikitabobko/tap/aerospace font-hack-nerd-font)
-APT_PACKAGES=(direnv jq zoxide build-essential python3-venv fd-find zsh)
 
 setup () {
   # dotfiles
@@ -55,16 +54,6 @@ setup () {
   # tmux
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-  if [[ $(uname) == Darwin ]]
-  then
-    setup_mac
-  else
-    setup_linux
-  fi
-}
-
-setup_mac () {
-  echo "Installing packages on Mac"
   # install brew
   if [[ ! $(command -v brew) ]]
   then
@@ -74,23 +63,6 @@ setup_mac () {
   brew install --cask $BREW_CASK_PACKAGES
   brew install $BREW_PACKAGES
   "$(brew --prefix)/opt/fzf/install"
-}
-
-setup_linux() {
-  echo "Installing packages on Linux"
-
-  sudo apt install --yes $APT_PACKAGES
-
-  # switch to zsh, since likely bash
-  chsh -s $(which zsh)
-
-  # nvim install from https://github.com/neovim/neovim/wiki/Installing-Neovim#appimage-universal-linux-package
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-  chmod u+x nvim.appimage
-  ./nvim.appimage --appimage-extract
-  ./squashfs-root/AppRun --version
-  sudo mv squashfs-root /
-  sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 }
 
 if [ -d "$HOME/.dotfiles" ]
