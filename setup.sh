@@ -62,7 +62,7 @@ setup () {
 
   brew install --cask $BREW_CASK_PACKAGES
   brew install $BREW_PACKAGES
-  "$(brew --prefix)/opt/fzf/install"
+  "$(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc"
 }
 
 if [ -d "$HOME/.dotfiles" ]
