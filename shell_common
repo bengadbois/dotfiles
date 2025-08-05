@@ -193,6 +193,14 @@ export HOMEBREW_NO_ANALYTICS=1
 eval "$(direnv hook zsh)"
 
 #
+# Kubernetes
+#
+path_to_kubectl="$(which kubectl)"
+if [ -x "$path_to_kubectl" ] ; then
+  source <(kubectl completion zsh)
+fi
+
+#
 # For host-specific extra that shouldn't be
 # added in here (security, specificness, etc.)
 #
