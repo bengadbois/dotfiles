@@ -42,4 +42,7 @@ return {
 			--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 		end,
 	},
+	{ -- Helm template highlighting. Not actually treesitter.
+		"towolf/vim-helm",
+	},
 }
