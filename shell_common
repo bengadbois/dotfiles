@@ -18,9 +18,6 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias mkdir='mkdir -pv'
 alias sl='ls'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias unmount='umount'
 eval "$(zoxide init zsh)"
 
 #
