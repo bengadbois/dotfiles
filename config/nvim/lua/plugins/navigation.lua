@@ -20,6 +20,10 @@ return {
 		"stevearc/oil.nvim",
 		opts = function()
 			return {
+				view_options = {
+					-- Show files and directories that start with "."
+					show_hidden = true,
+				},
 				vim.keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "Oil start" }),
 			}
 		end,
