@@ -50,7 +50,7 @@
 	followRedirects = true
 
 [merge]
-	conflictstyle = "diff3"
+	conflictstyle = "zdiff3"
 	summary = true
 	tool = "nvimdiff"
 
@@ -76,9 +76,12 @@
 	autoSetupRemote = true
 
 [pager]
-	diff = riff
-	show = riff
-	log = riff
+	diff = delta
+	show = delta
+	log = delta
 
-[interfactive]
-	diffFilter = "riff --color=on"
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
