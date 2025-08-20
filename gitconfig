@@ -74,3 +74,11 @@
 [push]
 	default = simple
 	autoSetupRemote = true
+
+[pager]
+	diff = riff
+	show = riff
+	log = riff
+
+[interfactive]
+	diffFilter = "riff --color=on"

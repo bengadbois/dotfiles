@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BREW_PACKAGES=(fzf rg tree direnv ccat jq alacritty zoxide direnv neovim fd prettier font-hack-nerd-font nvim tmux hyperfine qalculate-qt coreutils morantron/tmux-fingers)
+BREW_PACKAGES=(fzf rg tree direnv ccat jq alacritty zoxide direnv neovim fd prettier font-hack-nerd-font nvim tmux hyperfine qalculate-qt coreutils morantron/tmux-fingers riff)
 BREW_CASK_PACKAGES=(nikitabobko/tap/aerospace font-hack-nerd-font)
 
 setup () {

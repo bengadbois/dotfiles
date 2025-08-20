@@ -196,6 +196,7 @@ path_to_kubectl="$(which kubectl)"
 if [ -x "$path_to_kubectl" ] ; then
   source <(kubectl completion zsh)
 fi
+export KUBECTL_EXTERNAL_DIFF=riff
 
 #
 # For host-specific extra that shouldn't be
