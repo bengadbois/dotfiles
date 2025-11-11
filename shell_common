@@ -16,6 +16,8 @@ export PATH=$PATH:$GOBIN
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+# "git root"
+alias gr='cd $(git rev-parse --show-toplevel)'
 alias mkdir='mkdir -pv'
 alias sl='ls'
 eval "$(zoxide init zsh)"
