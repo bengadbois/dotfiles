@@ -177,7 +177,6 @@ alias nvimdiff="nvim -d"
 #
 
 alias py='python'
-alias k='kubectl'
 alias vim='nvim'
 
 #
@@ -194,6 +193,10 @@ eval "$(direnv hook zsh)"
 #
 # Kubernetes
 #
+alias k='kubectl'
+alias cc='kubectl config current-context'
+alias kc='kubie ctx'
+alias kn='kubie ns'
 path_to_kubectl="$(which kubectl)"
 if [ -x "$path_to_kubectl" ] ; then
   source <(kubectl completion zsh)

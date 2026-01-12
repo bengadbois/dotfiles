@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BREW_PACKAGES=(fzf rg tree direnv ccat jq alacritty zoxide direnv neovim fd prettier font-hack-nerd-font nvim tmux hyperfine qalculate-qt coreutils morantron/tmux-fingers)
+BREW_PACKAGES=(fzf rg tree direnv ccat jq alacritty zoxide direnv neovim fd prettier font-hack-nerd-font nvim tmux hyperfine qalculate-qt coreutils morantron/tmux-fingers kubie)
 BREW_CASK_PACKAGES=(nikitabobko/tap/aerospace font-hack-nerd-font)
 
 setup () {
@@ -24,6 +24,9 @@ setup () {
 
   # vim
   ln -sf "$HOME/.dotfiles/config/nvim" "$HOME/.config/nvim"
+
+  # kubernetes
+  cp -v "$HOME/.dotfiles/kubie.yaml" "$HOME/.kube/kubie.yaml" # ideally, would be a symlink if kubie knew how to read that
 
   # shell
   if [ ! -d "/usr/local/bin" ] # default starship install location

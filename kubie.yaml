@@ -1,0 +1,3 @@
+hooks:
+    start_ctx: >
+        export HISTFILE=~/.zsh_history
