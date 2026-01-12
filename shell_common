@@ -33,7 +33,7 @@ function v() {
   then
     if [ -z "$1" ];
     then
-      nvim -c "Telescope find_files"
+      nvim
     else
       # open directly
       nvim "$1"

@@ -39,3 +39,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		vim.lsp.buf.format({ async = false })
 	end,
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	desc = "Show matrix rain at startup",
+	callback = function()
+		-- only run on startup if there's no file loaded, and don't run when text piped into vim
+		local buf_empty = vim.fn.line("$") == 1 and vim.fn.getline(1) == ""
+		if vim.fn.argc() == 0 and buf_empty and not vim.o.insertmode then
+			vim.cmd("VimatrixOpen")
+		end
+	end,
+})
