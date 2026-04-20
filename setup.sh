@@ -63,8 +63,8 @@ setup () {
     NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
 
-  brew install --cask $BREW_CASK_PACKAGES
-  brew install $BREW_PACKAGES
+  brew install --cask "${BREW_CASK_PACKAGES[@]}"
+  brew install "${BREW_PACKAGES[@]}"
   "$(brew --prefix)/opt/fzf/install" --key-bindings --completion --no-update-rc
 }
 
