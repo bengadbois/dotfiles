@@ -6,11 +6,6 @@ return {
 		opts = { signs = false },
 	},
 
-	{ -- Commenting code
-		"numToStr/Comment.nvim",
-		opts = {},
-	},
-
 	{ -- Do diffs within the same file
 		"AndrewRadev/linediff.vim",
 	},
